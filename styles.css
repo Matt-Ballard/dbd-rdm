@@ -1,0 +1,130 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: "Special Elite", sans-serif;
+    font-size: 1rem;
+    background-image: 'dirtOverlay.png';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    margin-bottom: 1rem;
+    appearance: none;
+    background-color: black;
+    border: 1px solid whitesmoke;
+    border-radius: 2px;
+    color: whitesmoke;
+    cursor: pointer;
+    display: inline-block;
+    font-size: inherit;
+    font-family: inherit;
+    margin: 0.5rem;
+    padding: 6px 6px;
+    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    vertical-align: middle;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+button:hover {
+    background-color: whitesmoke;
+    font-weight: bold;
+    text-decoration: none;
+    transition-duration: 0.1s;
+    color: black;
+}
+.selected-button, button:active  {
+    box-shadow: 0 0 10px white;
+    animation: pulse 3s infinite;
+}
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 10px white; 
+    }
+    50% {
+        box-shadow: 0 0 15px white; 
+    }
+}
+.hero-img {
+    width: 100%;
+    background-position: center;
+    animation: fade 3s linear infinite;
+}
+@keyframes fade {
+    0%, 20% { filter: blur(0px) }
+    50%, 60% { filter: blur(1px) }
+    90%, 100% { filter: blur(0px) }
+}
+.hero-txt {
+    font-family: "Creepster", sans-serif, system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.25rem;
+    letter-spacing: 5px;
+
+    text-align: center;
+    position: absolute;
+    top: 12%;
+    left: 20%;
+    transform: rotate(-10deg);
+    color: red;
+    -webkit-text-stroke: 1px yellow;
+}
+#perk-display {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.display-row {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+}
+.perk-wrapper {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 2px;
+    padding: 3px;
+    margin: 0 0.5rem;
+}
+.perk-name {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    text-wrap: wrap;
+    margin: 5px 0 0 0;
+}
+.perk-icon {
+    display: flex;
+    height: 4rem;
+    width: 4rem;
+    margin: 0 5px;
+    background-color: black;
+}
+#main-screen {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#role-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.role-button {
+    flex: 1;
+    padding: 10px; 
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

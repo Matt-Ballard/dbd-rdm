@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <title>DBD Randomizer</title>
+
+        <link rel="stylesheet" href="styles.css"/>
+
+        <!-- Special Elite Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Special+Elite&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="hero">
+            <img src="images/stitchLogo.jpg" class="hero-img">
+            <!--<h1 class="hero-txt">Randomizer</h1>-->
+        </div>
+
+        <div id="main-screen">
+            <div id="role-buttons">
+                <button id="survivor-btn" class="role-button selected-button" onclick="selectRole('survivor')">
+                    <img class="perk-icon" id="survivor-btn-icon" src="images\survivor-icon.webp">
+                    Survivor
+                </button>
+
+                <button id="killer-btn" class="role-button" onclick="selectRole('killer')">
+                    <img class="perk-icon" id="killer-btn-icon" src="images\killer-icon.webp">
+                    Killer
+                </button>
+            </div>
+
+            <button id="settings-btn" class="role-button">
+                Settings
+                <img class="perk-icon" id="settings-icon" src="images\settings-icon.webp">
+            </button>
+
+            <button id="shuffle-btn" class="role-button" onclick="getRandomPerks()">
+                Shuffle!
+                <img class="perk-icon" id="shuffle-icon" src="images\chaos-shuffle.webp">
+            </button>
+
+            <div id="perk-display">
+
+                <div class="display-row">
+                    <div class="perk-wrapper">
+                        <p class="perk-name" id="p1-name">?</p>
+                        <img class="perk-icon" id="p1-icon" src="images\chaos-shuffle.webp" onerror="defaultIconSrc('p1-icon')">
+                    </div>
+
+                    <div class="perk-wrapper">
+                        <p class="perk-name" id="p2-name">?</p>
+                        <img class="perk-icon" id="p2-icon" src="images\chaos-shuffle.webp" onerror="defaultIconSrc('p2-icon')">
+                    </div>
+                </div>
+
+                <div class="display-row" >
+                    <div class="perk-wrapper">
+                        <p class="perk-name" id="p3-name">?</p>
+                        <img class="perk-icon" id="p3-icon" src="images\chaos-shuffle.webp" onerror="defaultIconSrc('p3-icon')">
+                    </div>
+
+                    <div class="perk-wrapper">
+                        <p class="perk-name" id="p4-name">?</p>
+                        <img class="perk-icon" id="p4-icon" src="images\chaos-shuffle.webp" onerror="defaultIconSrc('p4-icon')">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+
+</html>
